@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand-50: #f3f0ff;
+  --color-brand-100: #e8e2ff;
+  --color-brand-200: #d2c7ff;
+  --color-brand-500: #6d4ee8;
+  --color-brand-600: #5b3cd6;
+  --color-brand-700: #4a2fb4;
+  --color-navy-800: #1e2047;
+  --color-navy-900: #171936;
+
+  --color-canvas: #f6f7fb;
+  --color-ink: #141629;
+  --color-muted: #646a82;
+  --color-line: #e6e8f0;
+}
+
+html,
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--color-brand-200);
+}
+
+/* thin scrollbars inside panels */
+.scroll-thin {
+  scrollbar-width: thin;
+  scrollbar-color: #cfd3e1 transparent;
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.toast-in {
+  animation: toast-in 0.18s ease-out;
+}
